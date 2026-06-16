@@ -1,26 +1,136 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-bg: #0b0a1a;
+  --color-section-bg: #0b0a1a;
+  --color-card-bg: rgba(30, 27, 75, 0.45);
+  --color-accent-glow: #5b21b6;
+  --color-footer-bg: #070612;
+  
+  --color-navy: #f8fafc;
+  --color-navy-muted: #cbd5e1;
+  --color-navy-light: #94a3b8;
+  --color-accent-blue: #a78bfa;
+  
+  --color-cocos: #d4af37;
+  --color-cocos-dark: #2a1b14;
+  --color-nexus: #312e81;
+  --color-nexus-dark: #072224;
+  --color-ventures: #5b21b6;
+  --color-ventures-dark: #0f0f2b;
+  --color-obsidian: #0b0a1a;
+  --color-slate-dark: #111827;
+  --color-glass-card: rgba(49, 46, 129, 0.25);
+  --color-glass-border: rgba(248, 250, 252, 0.08);
+  --color-glass-glow: rgba(167, 139, 250, 0.03);
+  
+  --font-sans: var(--font-outfit), var(--font-inter), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0b0a1a;
+  --foreground: #f8fafc;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(248, 250, 252, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(248, 250, 252, 0.2);
+}
+
+/* Glassmorphism helpers */
+.glassmorphism {
+  background: rgba(30, 27, 75, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(248, 250, 252, 0.08);
+}
+
+.glassmorphism-light {
+  background: rgba(30, 27, 75, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(248, 250, 252, 0.05);
+}
+
+.bg-hero-gradient {
+  background: linear-gradient(180deg, #130f30 0%, #0a081d 100%);
+}
+
+/* Glowing text gradients */
+.text-gradient-ventures {
+  background: linear-gradient(135deg, #a78bfa 0%, #5b21b6 50%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cocos {
+  background: linear-gradient(135deg, #d4af37 0%, #aa7c11 50%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-nexus {
+  background: linear-gradient(135deg, #312e81 0%, #a78bfa 60%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury glowing mesh animations */
+.glow-ventures {
+  filter: blur(120px);
+  opacity: 0.25;
+  background: radial-gradient(circle, rgba(91, 33, 182, 0.3) 0%, rgba(212, 175, 55, 0.05) 50%, rgba(11, 10, 26, 0) 70%);
+}
+
+.glow-cocos {
+  filter: blur(120px);
+  opacity: 0.22;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.22) 0%, rgba(91, 33, 182, 0.05) 50%, rgba(11, 10, 26, 0) 70%);
+}
+
+.glow-nexus {
+  filter: blur(120px);
+  opacity: 0.25;
+  background: radial-gradient(circle, rgba(49, 46, 129, 0.3) 0%, rgba(167, 139, 250, 0.05) 50%, rgba(11, 10, 26, 0) 70%);
+}
+
+/* Lenis CSS fixes */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
