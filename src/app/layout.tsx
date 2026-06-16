@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   description: "M2P Ventures is a premium enterprise group driving forward strategic divisions including M2P Cocos (premium organic coconut sales) and M2P Nexus (technology consulting and digital solutions partner).",
   keywords: ["M2P Ventures", "M2P Cocos", "M2P Nexus", "Venture Capital", "Enterprise Group", "Strategic Divisions", "Coconut Sales", "Technology Consulting", "Software Engineering", "AI Automations"],
   authors: [{ name: "M2P Ventures" }],
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "M2P Ventures | Building Brands. Creating Future.",
     description: "Discover M2P Ventures, powering M2P Cocos and M2P Nexus.",
