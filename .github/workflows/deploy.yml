@@ -49,11 +49,17 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
-      # Step 6: Upload the generated static 'out' directory as a deployment artifact
+      # Step 6: Verify the output directory exists
+      - name: Verify build output
+        run: |
+          ls -la
+          ls -la out
+
+      # Step 7: Upload the generated static 'out' directory as a deployment artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: out
 
   # Deployment job
   deploy:
