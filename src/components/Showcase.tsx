@@ -61,6 +61,7 @@ export default function Showcase() {
                 src="/images/nexus-bg.png"
                 alt="M2P Nexus Shipping Logistics"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-25 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-card-bg via-card-bg/60 to-transparent" />
@@ -149,6 +150,7 @@ export default function Showcase() {
                 src="/images/cocos-bg.jpg"
                 alt="M2P Cocos Premium Coconut"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-25 group-hover:scale-105 group-hover:opacity-40 transition-all duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-card-bg via-card-bg/60 to-transparent" />

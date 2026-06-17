@@ -45,6 +45,7 @@ export default function Navbar() {
               src="/images/logo.png"
               alt="M2P Ventures Logo"
               fill
+              sizes="32px"
               className="object-contain rounded-md"
             />
           </div>

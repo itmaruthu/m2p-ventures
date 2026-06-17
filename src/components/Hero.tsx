@@ -84,6 +84,7 @@ export default function Hero() {
             src="/images/ventures-hero.png"
             alt="M2P Ventures background"
             fill
+            sizes="100vw"
             priority
             className="object-cover opacity-85 scale-105 select-none"
           />

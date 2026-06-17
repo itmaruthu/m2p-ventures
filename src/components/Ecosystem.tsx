@@ -152,6 +152,7 @@ export default function Ecosystem() {
                     src="/images/logo.png"
                     alt="M2P Ventures Logo"
                     fill
+                    sizes="56px"
                     className="object-contain rounded-xl"
                   />
                 </div>
