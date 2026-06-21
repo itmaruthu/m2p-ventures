@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Sprout, Box, Award, Sparkles, Feather, Cpu, Zap, Users } from "lucide-react";
 import Image from "next/image";
+import { prefixPath } from "@/config";
 
 export default function Showcase() {
   const [hoveredBrand, setHoveredBrand] = useState<"cocos" | "nexus" | null>(null);
@@ -58,7 +59,7 @@ export default function Showcase() {
             {/* Background Zoom Image */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/nexus-bg.png"
+                src={prefixPath("/images/nexus-bg.png")}
                 alt="M2P Nexus Shipping Logistics"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -147,7 +148,7 @@ export default function Showcase() {
             {/* Background Zoom Image */}
             <div className="absolute inset-0 z-0">
               <Image
-                src="/images/cocos-bg.jpg"
+                src={prefixPath("/images/cocos-bg.jpg")}
                 alt="M2P Cocos Premium Coconut"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"

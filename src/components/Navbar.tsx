@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { prefixPath } from "@/config";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function Navbar() {
         <Link href="#" className="flex items-center gap-2 group">
           <div className="relative h-8 w-8 overflow-hidden rounded-lg bg-white p-0.5 border border-white/10 shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
             <Image
-              src="/images/logo.png"
+              src={prefixPath("/images/logo.png")}
               alt="M2P Ventures Logo"
               fill
               sizes="32px"

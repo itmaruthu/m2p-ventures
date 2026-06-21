@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { BASE_PATH } from "@/config";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   keywords: ["M2P Ventures", "M2P Cocos", "M2P Nexus", "Venture Capital", "Enterprise Group", "Strategic Divisions", "Coconut Sales", "Technology Consulting", "Software Engineering", "AI Automations"],
   authors: [{ name: "M2P Ventures" }],
   icons: {
-    icon: "/favicon.ico",
+    icon: `${BASE_PATH}/favicon.ico`,
   },
   openGraph: {
     title: "M2P Ventures | Building Brands. Creating Future.",
@@ -50,7 +51,7 @@ export default function RootLayout({
           httpEquiv="Content-Security-Policy"
           content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-src 'self' https:;"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href={`${BASE_PATH}/favicon.ico`} sizes="any" />
       </head>
       <body className="min-h-full flex flex-col bg-obsidian text-foreground font-sans">
         {children}

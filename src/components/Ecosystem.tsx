@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { HelpCircle, Layers, ShieldCheck, Zap, ArrowRightLeft } from "lucide-react";
 import Image from "next/image";
+import { prefixPath } from "@/config";
 
 export default function Ecosystem() {
   const [activeNode, setActiveNode] = useState<"parent" | "cocos" | "nexus" | null>(null);
@@ -149,7 +150,7 @@ export default function Ecosystem() {
               >
                 <div className="relative w-14 h-14 rounded-2xl bg-white p-1 border border-white/10 shadow-md mb-4 shrink-0 overflow-hidden">
                   <Image
-                    src="/images/logo.png"
+                    src={prefixPath("/images/logo.png")}
                     alt="M2P Ventures Logo"
                     fill
                     sizes="56px"

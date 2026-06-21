@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, Play } from "lucide-react";
 import Image from "next/image";
 
+import { prefixPath } from "@/config";
+
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -81,7 +83,7 @@ export default function Hero() {
           className="absolute inset-0"
         >
           <Image
-            src="/images/ventures-hero.png"
+            src={prefixPath("/images/ventures-hero.png")}
             alt="M2P Ventures background"
             fill
             sizes="100vw"
